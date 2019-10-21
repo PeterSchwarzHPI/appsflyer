@@ -13,7 +13,7 @@ $ pip install git+https://github.com/PeterSchwarzHPI/appsflyer.git
 ## Usage
 
 ```python
-from appsflyer import AppsFlyerClient
+from appsflyer.client import AppsFlyerClient
 
 event = {
     'revenue': 6,
