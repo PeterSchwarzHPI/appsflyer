@@ -1,9 +1,7 @@
 import json
 
 class AppsFlyerEvent(object):
-    def __init__(self, app_id, appsflyer_id, name, payload, customer_user_id=None, ip=None, time=None, currency=None):
-        assert isinstance(app_id, str)
-        self.app_id = app_id
+    def __init__(self, appsflyer_id, name, payload, customer_user_id=None, ip=None, time=None, currency=None):
         self.appsflyer_id = appsflyer_id
         self.name = name
         self.payload = json.dumps(payload)
@@ -29,9 +27,8 @@ class AppsFlyerEvent(object):
         return event_json
 
 class IosAppsFlyerEvent(AppsFlyerEvent):
-    def __init__(self, app_id, appsflyer_id, name, payload, idfa=None, customer_user_id=None, ip=None, time=None, currency=None):
-        super(IosAppsFlyerEvent, self).__init__(app_id, appsflyer_id, name, payload, time=time, currency=currency)
-        assert app_id.startswith('id')
+    def __init__(self, appsflyer_id, name, payload, idfa=None, customer_user_id=None, ip=None, time=None, currency=None):
+        super(IosAppsFlyerEvent, self).__init__(appsflyer_id, name, payload, time=time, currency=currency)
         self.idfa = idfa
 
     def to_json(self):
@@ -41,9 +38,8 @@ class IosAppsFlyerEvent(AppsFlyerEvent):
         return event_json
 
 class AndroidAppsFlyerEvent(AppsFlyerEvent):
-    def __init__(self, app_id, appsflyer_id, name, payload, advertising_id=None, customer_user_id=None, ip=None, time=None, currency=None):
-        super(AndroidAppsFlyerEvent, self).__init__(app_id, appsflyer_id, name, payload, time=time, currency=currency)
-        assert app_id.startswith('com')
+    def __init__(self, appsflyer_id, name, payload, advertising_id=None, customer_user_id=None, ip=None, time=None, currency=None):
+        super(AndroidAppsFlyerEvent, self).__init__(appsflyer_id, name, payload, time=time, currency=currency)
         self.advertising_id = advertising_id
 
     def to_json(self):
