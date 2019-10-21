@@ -22,6 +22,7 @@ class AppsFlyerClient(object):
             if app_id.startswith(prefix):
                 result = event_class
         assert result is not None
+        return result
 
     def _prepare_headers(self):
         return {
