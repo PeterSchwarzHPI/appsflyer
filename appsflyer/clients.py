@@ -6,7 +6,7 @@ from .events import IosAppsFlyerEvent, AndroidAppsFlyerEvent
 class AppsFlyerClient(object):
     PREFIX_EVENT_MAPPING = {
         'id': IosAppsFlyerEvent,
-        'com.appsflyer': AndroidAppsFlyerEvent
+        'com': AndroidAppsFlyerEvent
     }
 
     def __init__(self, dev_key, app_id):
