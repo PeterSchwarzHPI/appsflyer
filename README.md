@@ -31,7 +31,7 @@ event_data = {
 # 'currency'         - If you want to add a specific event currency.
 appsflyer_event = IosAppsFlyerEvent(appsflyer_id, event_name, event_data, **kwargs) 
 appsflyer_client = AppsFlyerClient('DEV_KEY', 'APP_ID')
-appsflyer_client.send_event(event)
+appsflyer_client.send_event(appsflyer_event)
 
 ```
 
@@ -56,7 +56,7 @@ event_data = {
 # 'currency'         - If you want to add a specific event currency.
 appsflyer_event = AndroidAppsFlyerEvent(appsflyer_id, event_name, event_data, **kwargs)
 appsflyer_client = AppsFlyerClient('DEV_KEY', 'APP_ID')
-appsflyer_client.send_event(event)
+appsflyer_client.send_event(appsflyer_event)
 
 ```
 
