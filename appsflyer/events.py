@@ -34,7 +34,7 @@ class IosAppsFlyerEvent(AppsFlyerEvent):
     def to_json(self):
         event_json = super(IosAppsFlyerEvent, self).to_json()
         if self.idfa:
-            event_json['idfa']
+            event_json['idfa'] = self.idfa
         return event_json
 
 class AndroidAppsFlyerEvent(AppsFlyerEvent):
@@ -45,5 +45,5 @@ class AndroidAppsFlyerEvent(AppsFlyerEvent):
     def to_json(self):
         event_json = super(AndroidAppsFlyerEvent, self).to_json()
         if self.advertising_id:
-            event_json['advertising_id']
+            event_json['advertising_id'] = self.advertising_id
         return event_json
