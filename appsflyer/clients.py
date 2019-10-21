@@ -38,7 +38,7 @@ class AppsFlyerClient(object):
     def interpret_appsflyer_response(self, response):
         if response.status_code == 401:
             raise UnauthorizedDevKeyException()
-        response.raise_for_stats()
+        response.raise_for_status()
 
     def send_event(self, event):
         assert isinstance(event, self.event_class)
