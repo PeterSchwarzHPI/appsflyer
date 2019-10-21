@@ -1,6 +1,9 @@
 # Appsflyer
 
-AppsFlyer API client library for Python.
+AppsFlyer client for Python.
+
+Functionality:
+- Send events to Appsflyer
 
 ## Installation
 
