@@ -1,4 +1,4 @@
-# Appsflyer
+# AppsFlyer
 
 AppsFlyer client for Python to enable:
 
