@@ -22,7 +22,7 @@ class AppsFlyerClient(object):
         result = None
         for prefix, event_class in self.prefix_event_class_mapping.items():
             if app_id.startswith(prefix):
-                self.event_class = event_class
+                result = event_class
         assert result is not None
 
     def _prepare_headers(self):
