@@ -41,7 +41,7 @@ class AppsFlyerClient(object):
             raise UnauthorizedDevKeyException()
         response.raise_for_status()
 
-    def send_event(self, ):
+    def send_event(self):
         assert isinstance(event, self.event_class)
         payload = self._prepare_payload(event)
         appsflyer_endpoint = APPSFLYER_ENDPOINT + self.app_id
