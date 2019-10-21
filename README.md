@@ -1,14 +1,13 @@
 # Appsflyer
 
-AppsFlyer client for Python.
+AppsFlyer client for Python to enable:
 
-Functionality:
-- Send events to Appsflyer
+- sending events to Appsflyer.
 
 ## Installation
 
 ```bash
-$ pip install git@github.com:PeterSchwarzHPI/appsflyer.git
+$ pip install git+https://github.com/PeterSchwarzHPI/appsflyer.git
 ```
 
 ## Usage
