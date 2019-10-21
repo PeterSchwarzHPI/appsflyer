@@ -1,4 +1,4 @@
-# Appsflyer
+# AppsFlyer
 
 AppsFlyer client for Python to enable:
 
@@ -13,7 +13,7 @@ $ pip install git+https://github.com/PeterSchwarzHPI/appsflyer.git
 ## Usage
 
 ```python
-from appsflyer.client import AppsFlyerClient
+from appsflyer.clients import AppsFlyerClient
 
 event = {
     'revenue': 6,

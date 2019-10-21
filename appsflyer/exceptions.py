@@ -1,0 +1,2 @@
+class UnauthorizedDevKeyException(Exception):
+    pass
