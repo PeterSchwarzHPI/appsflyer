@@ -24,7 +24,7 @@ event_data = {
 }
 
 # kwargs:
-# 'idfa'   - If you wish to map your in-app events from organic users with external partners.
+# 'idfa'             - If you wish to map your in-app events from organic users with external partners.
 # 'customer_user_id' - Adds a custom user id to the AppsFlyer data sets.
 # 'ip'               - Adds the user's ip address to the AppsFlyer data sets.
 # 'time'             - If you want to add a specific event time - format: "YYYY-MM-DD HH:MM:SS.MS"

@@ -18,7 +18,7 @@ class AppsFlyerClient(object):
 
     def _get_event_class(self, app_id):
         result = None
-        for prefix, event_class in PREFIX_EVENT_MAPPING.items():
+        for prefix, event_class in self.PREFIX_EVENT_MAPPING.items():
             if app_id.startswith(prefix):
                 result = event_class
         assert result is not None
