@@ -2,7 +2,7 @@
 
 AppsFlyer client for Python to enable:
 
-- sending events to Appsflyer.
+- sending events to AppsFlyer.
 
 ## Installation
 
