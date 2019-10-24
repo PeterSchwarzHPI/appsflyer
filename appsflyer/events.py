@@ -14,7 +14,7 @@ class AppsFlyerEvent(object):
         event_json = {
             'appsflyer_id': self.appsflyer_id,
             'eventName': self.name,
-            'eventValue': self.payload
+            'eventValue': self.payload or ""
         }
         if self.customer_user_id:
             event_json['customer_user_id'] = self.customer_user_id
