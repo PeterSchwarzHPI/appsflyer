@@ -31,12 +31,11 @@ class AppsFlyerEvent(object):
 
 class RevenueEvent(AppsFlyerEvent):
     def __init__(self, appsflyer_id, revenue, currency, idfa=None, advertising_id=None, customer_user_id=None, ip=None, time=None):
+        payload = {'af_revenue': '{}'.format(revenue)}
         super(RevenueEvent, self).__init__(appsflyer_id, 'af_purchase', idfa=idfa, advertising_id=advertising_id, customer_user_id=customer_user_id, ip=ip, time=time) 
-        self.revenue = revenue
         self.currency = currency
 
     def to_json(self):
         event_json = super(RevenueEvent, self).to_json()
-        event_json['eventValue'] = "{\"af_revenue\": \"$REVENUE$\"}".replace('$REVENUE$', str(self.revenue))
         event_json['eventCurrency'] = self.currency
         return event_json
