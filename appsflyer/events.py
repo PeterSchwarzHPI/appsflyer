@@ -39,3 +39,4 @@ class RevenueEvent(AppsFlyerEvent):
         event_json = super(RevenueEvent, self).to_json()
         event_json['eventValue'] = "{\"af_revenue\": \"$REVENUE$\"}".replace('$REVENUE$', str(self.revenue))
         event_json['eventCurrency'] = self.currency
+        return event_json
