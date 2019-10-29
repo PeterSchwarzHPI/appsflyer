@@ -26,7 +26,7 @@ class AppsFlyerEvent(object):
             event_json['eventTime'] = self.time
         if self.idfa:
             event_json['idfa'] = self.idfa
-        else self.advertising_id:
+        else:
             event_json['advertising_id'] = self.advertising_id
         return event_json
 
