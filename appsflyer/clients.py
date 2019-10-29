@@ -44,6 +44,7 @@ class AppsFlyerClient(object):
     def send_event(self, event):
         assert isinstance(event, self.event_class)
         payload = self._prepare_payload(event)
+        print(payload)
         appsflyer_endpoint = APPSFLYER_ENDPOINT + self.app_id
         headers = self._prepare_headers()
         response = requests.post(url=appsflyer_endpoint, data=payload, headers=headers)
