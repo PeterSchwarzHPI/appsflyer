@@ -4,7 +4,7 @@ class AppsFlyerEvent(object):
     def __init__(self, appsflyer_id, name, payload, customer_user_id=None, ip=None, time=None, currency=None):
         self.appsflyer_id = appsflyer_id
         self.name = name
-        self.payload = json.dumps(payload)
+        self.payload = json.dumps(json.dumps(payload)) # for formatting reasons
         self.customer_user_id = customer_user_id
         self.ip = ip
         self.time = time
