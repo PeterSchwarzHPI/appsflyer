@@ -3,9 +3,6 @@ from .specs import APPSFLYER_ENDPOINT
 from .exceptions import UnauthorizedDevKeyException
 from .events import IosAppsFlyerEvent, AndroidAppsFlyerEvent
 
-import logging
-_logger = logging.getLogger(__name__)
-
 class AppsFlyerClient(object):
     PREFIX_EVENT_CLASS_MAPPING = {
         'id': IosAppsFlyerEvent,
@@ -41,12 +38,12 @@ class AppsFlyerClient(object):
     def interpret_appsflyer_response(self, response):
         if response.status_code == 401:
             raise UnauthorizedDevKeyException()
+        print(response.text)
         response.raise_for_status()
 
     def send_event(self, event):
         assert isinstance(event, self.event_class)
         payload = self._prepare_payload(event)
-        _logger.info(payload)
         appsflyer_endpoint = APPSFLYER_ENDPOINT + self.app_id
         headers = self._prepare_headers()
         response = requests.post(url=appsflyer_endpoint, data=payload, headers=headers)
