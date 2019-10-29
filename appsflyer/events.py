@@ -10,7 +10,6 @@ class AppsFlyerEvent(object):
         self.customer_user_id = customer_user_id
         self.ip = ip
         self.time = time
-        self.currency = currency
 
     def to_json(self):
         event_json = {
