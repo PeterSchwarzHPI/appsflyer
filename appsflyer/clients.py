@@ -31,5 +31,5 @@ class AppsFlyerClient(object):
         print(payload)
         appsflyer_endpoint = APPSFLYER_ENDPOINT + self.app_id
         headers = self._prepare_headers()
-        response = requests.request("POST", url, headers=headers, json=payload)
+        response = requests.request("POST", appsflyer_endpoint, headers=headers, json=payload)
         self.interpret_appsflyer_response(response)
