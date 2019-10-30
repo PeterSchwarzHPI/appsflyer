@@ -42,4 +42,4 @@ class RevenueEvent(AppsFlyerEvent):
 
 class LoginEvent(AppsFlyerEvent):
     def __init__(self, appsflyer_id, idfa=None, advertising_id=None, customer_user_id=None, ip=None, time=None):
-        super(RevenueEvent, self).__init__(appsflyer_id, 'af_login', idfa=idfa, advertising_id=advertising_id, customer_user_id=customer_user_id, ip=ip, time=time)
+        super(LoginEvent, self).__init__(appsflyer_id, 'af_login', idfa=idfa, advertising_id=advertising_id, customer_user_id=customer_user_id, ip=ip, time=time)
