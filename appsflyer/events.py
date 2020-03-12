@@ -43,3 +43,8 @@ class RevenueEvent(AppsFlyerEvent):
 class LoginEvent(AppsFlyerEvent):
     def __init__(self, appsflyer_id, idfa=None, advertising_id=None, customer_user_id=None, ip=None, time=None):
         super(LoginEvent, self).__init__(appsflyer_id, 'af_login', idfa=idfa, advertising_id=advertising_id, customer_user_id=customer_user_id, ip=ip, time=time)
+
+class RegistrationEvent(AppsFlyerEvent):
+    def __init__(self, appsflyer_id, registration_method, idfa=None, advertising_id=None, customer_user_id=None, ip=None, time=None):
+        payload = {'af_registration_method': '{}'.format(registration_method)}
+        super(RegistrationEvent, self).__init__(appsflyer_id, 'af_complete_registration', payload=payload, idfa=idfa, advertising_id=advertising_id, customer_user_id=customer_user_id, ip=ip, time=time)
